@@ -69,7 +69,8 @@ func init() {
 
 func main() {
 	o := orm.NewOrm()
-	defer orm.DeregisterAllDatabases()
+
+	defer orm.DeregisterAllDatabases() 
 	o.Using("default") // 默认使用 default，你可以指定为其他数据库
 
 	profile := new(Profile)
